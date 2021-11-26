@@ -15,7 +15,7 @@ for line in my_file:
     #divido tra Date  ,  Sales 
     elements=line.split(',')
 
-    #se non solo su Date
+    #se non sono su Date
     if elements[0]!="Date":
         
         #definisco date nella stringa alla prima posizione
