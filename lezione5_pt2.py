@@ -35,9 +35,9 @@ class CSVFile():
 
 
 
-class NumericalCSVFile():
+class NumericalCSVFile(CSVFile):
     
-    if elements[0]!="Date":
+    '''if elements[0]!="Date":
         
         #definisco date nella stringa alla prima posizione
         date=elements[0]
@@ -46,10 +46,11 @@ class NumericalCSVFile():
         value=elements[1]
 
         #copio value e lo trasformo in un float
-        values.append(float(value))
+        values.append(float(value))'''
 
+   def get_data
 
-#poi aggiungete questi due campi al file "shampoo_sales.csv" 9vedi pdf e gestite gli errori che verranno generati in modod che le linee vengano saltate senza bloccare il programma ma che venga stampato a scehrmo l'errore
+#poi aggiungete questi due campi al file "shampoo_sales.csv" (vedi pdf) e gestite gli errori che verranno generati in modod che le linee vengano saltate senza bloccare il programma ma che venga stampato a scehrmo l'errore
 
 #istanzio l'oggetto con il file shampoo_sales
 my_object=CSVFile('shampoo_sales.csv')
