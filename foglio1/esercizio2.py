@@ -18,7 +18,7 @@ for line in my_file:
     elements=line.split(',')
 
     #se non sono su Sales
-    if elements[0]!="Sales":
+    if elements[1]!="Sales":
       
         #importo la libreria datetime
         from datetime import datetime
@@ -29,7 +29,7 @@ for line in my_file:
         #definisco value nella stringa alla seconda posizione
         value=elements[1]
 
-        my date=datetime.strptime(elements[0], '%d-%m-%Y')
+        my_date=datetime.strptime(elements[0], '%d-%m-%Y')
 
     for date in date_vendite:
         print(date.strftime('%d-%m-%Y'))
