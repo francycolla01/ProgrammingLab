@@ -9,46 +9,37 @@ class CSVFile():
 
         self.name=name
 
-    #abbia un metodo get_data() che torni i dati del file CSV come lista di liste
-    def get_data(self):
+    class NumericalCSVFile(CSVFil):
 
-        #apro l'attributo name 
-        my_file=open(self.name, 'r')
+        #apro shampoo_sales
+        my_file=open('shampoo_sales.csv', 'r')
 
-        #inizializzo lista vuota dove ci sono i valori
-        values=[]
+        def get_data(self):
 
-        #scorro tutte le linee
-        for line in my_file:
+            #scorro tutte le linee
+            for line in my_file:
 
-            #divido tra Date  ,  Sales 
-            elements=line.split(',')
+                #divido tra Date  ,  Sales 
+                elements=line.split(',')
 
-            #aggiungo alla lista vuota le "liste piccole" create prima
-            values.append(elements)
-
-        #chiudo il file
-        my_file.close()
-
-        #ritorno la lista
-        return values
-
-
-
-class NumericalCSVFile(CSVFile):
-    
-    '''if elements[0]!="Date":
+                #se non sono su Date
+                if elements[0]!="Date":
         
-        #definisco date nella stringa alla prima posizione
-        date=elements[0]
+                    #definisco date nella stringa alla prima posizione
+                    date=elements[0]
 
-        #definisco value nella stringa alla seconda posizione
-        value=elements[1]
+                    #definisco value nella stringa alla seconda posizione
+                    value=elements[1]
 
-        #copio value e lo trasformo in un float
-        values.append(float(value))'''
+                    #copio value e lo trasformo in un float
+                    values.append(float(value))
 
-   def get_data
+                    return values
+
+#chiudo il file
+my_file.close()
+
+
 
 #poi aggiungete questi due campi al file "shampoo_sales.csv" (vedi pdf) e gestite gli errori che verranno generati in modod che le linee vengano saltate senza bloccare il programma ma che venga stampato a scehrmo l'errore
 
