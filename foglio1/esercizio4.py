@@ -28,7 +28,12 @@ class Automobile():
         print('Broom Broom')
 
     #metodo confronta usando 
-    def confronta(self, casa_automo):
+    def __cmp__(self, other):
+
+
+
+
+        
 
         
 

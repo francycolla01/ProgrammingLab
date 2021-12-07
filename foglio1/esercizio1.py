@@ -21,7 +21,7 @@ def statistiche(the_list):
     #valuto gli elementi della lista
     for item in the_list:
 
-        #se gli elementi sono interi
+        #se gli elementi sono interi #isinstance(item, int)
         if type(item)==int:
 
             #somma gli elementi
