@@ -37,4 +37,6 @@ class IncrementModel():
 
     return prediz
 
-
+data=[50,52,60]
+ris=IncrementModel(data)
+print(ris)

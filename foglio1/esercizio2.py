@@ -3,7 +3,7 @@
 
 
 #apro shampoo_sales
-my_file=open('shampoo_sales.csv', 'r')
+my_file=open('foglio1/shampoo_sales.csv', 'r')
 
 #inizializzo lista vuota dove ci sono i valori
 values=[]
@@ -14,6 +14,7 @@ for line in my_file:
     #creo una lista vuota
     data_vendite=[]
 
+    elements=line.strip(',')
     #divido tra Date  ,  Sales 
     elements=line.split(',')
 
