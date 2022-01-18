@@ -8,15 +8,18 @@ my_file=open('foglio1/shampoo_sales.csv', 'r')
 #inizializzo lista vuota dove ci sono i valori
 values=[]
 
+data_vendite=[]
+
 #scorro tutte le linee
 for line in my_file:
 
     #creo una lista vuota
-    data_vendite=[]
+    my_date=[]
 
-    elements=line.strip(',')
     #divido tra Date  ,  Sales 
     elements=line.split(',')
+
+    elements=line.strip(',')
 
     #se non sono su Sales
     if elements[1]!="Sales":
@@ -32,8 +35,8 @@ for line in my_file:
 
         my_date=datetime.strptime(elements[0], '%d-%m-%Y')
 
-    for date in date_vendite:
-        print(date.strftime('%d-%m-%Y'))
+for date in date_vendite:
+    print(date.strftime('%d-%m-%Y'))
 
 #chiudo il file
 my_file.close()

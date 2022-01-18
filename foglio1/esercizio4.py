@@ -28,14 +28,8 @@ class Automobile():
         print('Broom Broom')
 
     #metodo confronta usando 
-    def __cmp__(self, other):
-
-
-
-
-        
-
-        
+    def confronta(self, other):
+      
 
 
 automobile=Automobile('Honda', 'CRV', '5 posti', 'CE567')
