@@ -9,6 +9,23 @@ class Diff():
 
     def __init__(self, ratio=1):
 
+        if not (isinstance(ratio, int) or isinstance(ratio, float)):
+
+                raise ExamException('non ho ricevuto un numero intero o float, questo numero è: "{}"'.format(ratio))
+        
+        if ratio is None:
+
+            raise ExamException('serve che ratio abbia un valore numerico')
+
+        if ratio==0:
+
+            raise ExamException('deve essre un numero diverso da zero visto che dopo sarà un divisore')
+
+        if ratio<0:
+
+            raise ExamException('deve essre un numero positivo visto che dopo sarà un divisore'
+            )
+
         self.ratio=ratio
 
     def compute(self, value):
